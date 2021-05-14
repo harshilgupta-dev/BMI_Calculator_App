@@ -5,7 +5,8 @@ import 'icon_content.dart';
 import 'reusable_card.dart';
 
 const bottomContainerHeight = 80.0;
-const cardColorOnChange = 0xFF1D1E33;
+const activeColor = 0xFF1D1E33;
+const inactiveColor = 0xFF111328;
 const bottomContainerColor = Color(0xFFEB1555);
 
 class InputPage extends StatefulWidget {
@@ -29,11 +30,11 @@ class _InputPageState extends State<InputPage> {
                 children: [
                   Expanded(
                       child: ReusableCard(
-                    cardChild: IconContent(
+                        cardChild: IconContent(
                       icon: FontAwesomeIcons.mars,
                       label: 'Male',
                     ),
-                    colour: Color(cardColorOnChange),
+                    colour: Color(activeColor),
                   )),
                   Expanded(
                     child: ReusableCard(
@@ -41,7 +42,7 @@ class _InputPageState extends State<InputPage> {
                         icon: FontAwesomeIcons.venus,
                         label: 'Female',
                       ),
-                      colour: Color(cardColorOnChange),
+                      colour: Color(activeColor),
                     ),
                   ),
                 ],
@@ -50,7 +51,7 @@ class _InputPageState extends State<InputPage> {
             // 2nd Row
             Expanded(
                 child: ReusableCard(
-                  colour: Color(cardColorOnChange),
+                  colour: Color(activeColor),
             )),
             // 3rd row
             Expanded(
@@ -58,11 +59,11 @@ class _InputPageState extends State<InputPage> {
                 children: [
                   Expanded(
                       child: ReusableCard(
-                        colour: Color(cardColorOnChange),
+                        colour: Color(activeColor),
                   )),
                   Expanded(
                       child: ReusableCard(
-                        colour: Color(cardColorOnChange),
+                        colour: Color(activeColor),
                   ))
                 ],
               ),
@@ -79,6 +80,3 @@ class _InputPageState extends State<InputPage> {
     );
   }
 }
-
-
-
