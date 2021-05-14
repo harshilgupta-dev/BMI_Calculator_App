@@ -9,7 +9,10 @@ class BMICalculator extends StatelessWidget {
       theme: ThemeData(
         primaryColor: Color(0xFF0A0E21),
         scaffoldBackgroundColor: Color(0xFF0A0E21),
-        accentColor: Colors.white
+        accentColor: Colors.white,
+        textTheme: TextTheme(
+          body1: TextStyle(color: Colors.white)
+        )
       ),
       title: 'BMI Calculator',
       debugShowCheckedModeBanner: false,
