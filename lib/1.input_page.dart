@@ -9,6 +9,11 @@ const activeColor = 0xFF1D1E33;
 const inactiveColor = 0xFF111328;
 const bottomContainerColor = Color(0xFFEB1555);
 
+enum Gender {
+  male,
+  female,
+}
+
 class InputPage extends StatefulWidget {
   @override
   _InputPageState createState() => _InputPageState();
@@ -17,6 +22,25 @@ class InputPage extends StatefulWidget {
 class _InputPageState extends State<InputPage> {
   int maleColor = inactiveColor;
   int femaleColor = inactiveColor;
+
+  void updateColour(Gender selectedGender) {
+    if (selectedGender == Gender.male) {
+      if (maleColor == inactiveColor) {
+        maleColor = activeColor;
+        femaleColor = inactiveColor;
+      } else {
+        maleColor = inactiveColor;
+      }
+    }
+    if (selectedGender == Gender.female) {
+      if (femaleColor == inactiveColor) {
+        femaleColor = activeColor;
+        maleColor = inactiveColor;
+      } else {
+        femaleColor = inactiveColor;
+      }
+    }
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -34,7 +58,9 @@ class _InputPageState extends State<InputPage> {
                   Expanded(
                       child: GestureDetector(
                     onTap: () {
-                      setState(() {});
+                      setState(() {
+                        updateColour(Gender.male);
+                      });
                     },
                     child: ReusableCard(
                       cardChild: IconContent(
@@ -46,7 +72,9 @@ class _InputPageState extends State<InputPage> {
                   )),
                   Expanded(
                     child: GestureDetector(
-                      onTap: () {},
+                      onTap: () {
+                        updateColour(Gender.female);
+                      },
                       child: ReusableCard(
                         cardChild: IconContent(
                           icon: FontAwesomeIcons.venus,
