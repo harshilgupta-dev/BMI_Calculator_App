@@ -20,27 +20,34 @@ class _InputPageState extends State<InputPage> {
             Expanded(
               child: Row(
                 children: [
-                  Expanded(child: ReusableCard(colour: Color(0xFF1D1E33),)),
                   Expanded(
-                    child: ReusableCard(colour: Color(0xFF1D1E33),)
-                  ),
+                      child: ReusableCard(
+                    colour: Color(0xFF1D1E33),
+                  )),
+                  Expanded(
+                      child: ReusableCard(
+                    colour: Color(0xFF1D1E33),
+                  )),
                 ],
               ),
             ),
             // 2nd Row
             Expanded(
-              child: ReusableCard(colour: Color(0xFF1D1E33),)
-            ),
+                child: ReusableCard(
+              colour: Color(0xFF1D1E33),
+            )),
             // 3rd row
             Expanded(
               child: Row(
                 children: [
                   Expanded(
-                    child: ReusableCard(colour: Color(0xFF1D1E33),)
-                  ),
+                      child: ReusableCard(
+                    colour: Color(0xFF1D1E33),
+                  )),
                   Expanded(
-                    child: ReusableCard(colour: Color(0xFF1D1E33),)
-                  )
+                      child: ReusableCard(
+                    colour: Color(0xFF1D1E33),
+                  ))
                 ],
               ),
             )
@@ -52,9 +59,7 @@ class _InputPageState extends State<InputPage> {
 }
 
 class ReusableCard extends StatelessWidget {
-
-
-  Color colour;
+  final Color colour;
 
   ReusableCard({@required this.colour});
 
