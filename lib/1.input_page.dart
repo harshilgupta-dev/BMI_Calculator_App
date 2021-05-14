@@ -15,6 +15,9 @@ class InputPage extends StatefulWidget {
 }
 
 class _InputPageState extends State<InputPage> {
+  int maleColor = inactiveColor;
+  int femaleColor = inactiveColor;
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -29,20 +32,28 @@ class _InputPageState extends State<InputPage> {
               child: Row(
                 children: [
                   Expanded(
-                      child: ReusableCard(
-                        cardChild: IconContent(
-                      icon: FontAwesomeIcons.mars,
-                      label: 'Male',
-                    ),
-                    colour: Color(activeColor),
-                  )),
-                  Expanded(
+                      child: GestureDetector(
+                    onTap: () {
+                      setState(() {});
+                    },
                     child: ReusableCard(
                       cardChild: IconContent(
-                        icon: FontAwesomeIcons.venus,
-                        label: 'Female',
+                        icon: FontAwesomeIcons.mars,
+                        label: 'Male',
                       ),
-                      colour: Color(activeColor),
+                      colour: Color(maleColor),
+                    ),
+                  )),
+                  Expanded(
+                    child: GestureDetector(
+                      onTap: () {},
+                      child: ReusableCard(
+                        cardChild: IconContent(
+                          icon: FontAwesomeIcons.venus,
+                          label: 'Female',
+                        ),
+                        colour: Color(femaleColor),
+                      ),
                     ),
                   ),
                 ],
