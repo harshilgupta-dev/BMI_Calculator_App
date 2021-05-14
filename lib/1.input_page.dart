@@ -52,7 +52,7 @@ class _InputPageState extends State<InputPage> {
 }
 
 class ReusableCard extends StatelessWidget {
-  const ReusableCard({Key key}) : super(key: key);
+
 
   @override
   Widget build(BuildContext context) {
