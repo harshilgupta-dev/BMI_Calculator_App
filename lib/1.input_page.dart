@@ -27,13 +27,21 @@ class _InputPageState extends State<InputPage> {
                 children: [
                   Expanded(
                       child: ReusableCard(
-                    cardChild: IconContent(),
+                    cardChild: IconContent(
+                      icon: FontAwesomeIcons.mars,
+                      label: 'Male',
+                    ),
                     colour: Color(cardColorOnChange),
                   )),
                   Expanded(
-                      child: ReusableCard(
-                        colour: Color(cardColorOnChange),
-                  )),
+                    child: ReusableCard(
+                      cardChild: IconContent(
+                        icon: FontAwesomeIcons.venus,
+                        label: 'Female',
+                      ),
+                      colour: Color(cardColorOnChange),
+                    ),
+                  ),
                 ],
               ),
             ),
@@ -90,11 +98,10 @@ class ReusableCard extends StatelessWidget {
 }
 
 class IconContent extends StatelessWidget {
-
   final String label;
   final IconData icon;
 
-  IconContent({this.icon, this.label})
+  IconContent({this.icon, this.label});
 
   @override
   Widget build(BuildContext context) {
