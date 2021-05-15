@@ -20,6 +20,7 @@ class _InputPageState extends State<InputPage> {
 
   Gender selectedGender;
   double height = 180;
+  int weight = 60;
 
   @override
   Widget build(BuildContext context) {
@@ -126,7 +127,16 @@ class _InputPageState extends State<InputPage> {
                 child: Row(
               children: [
                 Expanded(
-                  child: ResuableCard(colour: kActiveCardColour),
+                  child: ResuableCard(
+                      cardChild: Column(
+                        children: [
+                          Text(
+                            'HEIGHT',
+                            style: kLabelTextStyle,
+                          ),
+                        ],
+                      ),
+                      colour: kActiveCardColour),
                 ),
                 Expanded(
                   child: ResuableCard(colour: kActiveCardColour),
@@ -149,6 +159,8 @@ class RoundIconButton extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return RawMaterialButton(onPressed: onPressed);
+    return RawMaterialButton(
+      shape: CircleBorder(),
+    );
   }
 }
