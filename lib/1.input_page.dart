@@ -39,7 +39,7 @@ class _InputPageState extends State<InputPage> {
                     onTap: () {
                       setState(() {
                         print('Male Button Pressed');
-                        updateColour(1);
+                        selectedGender = Gender.male;
                       });
                     },
                     child: ResuableCard(
@@ -47,7 +47,9 @@ class _InputPageState extends State<InputPage> {
                         icon: FontAwesomeIcons.mars,
                         label: 'MALE',
                       ),
-                      colour: maleCardColour,
+                      colour: selectedGender == Gender.male
+                          ? activeCardColour
+                          : inactiveCardColour,
                     ),
                   ),
                 ),
@@ -56,11 +58,13 @@ class _InputPageState extends State<InputPage> {
                     onTap: () {
                       setState(() {
                         print('feMale Button Pressed');
-                        updateColour(2);
+                        selectedGender = Gender.female;
                       });
                     },
                     child: ResuableCard(
-                      colour: femaleCardColour,
+                      colour: selectedGender == Gender.female
+                          ? activeCardColour
+                          : inactiveCardColour,
                       cardChild: IconContent(
                         icon: FontAwesomeIcons.venus,
                         label: 'FEMALE',
