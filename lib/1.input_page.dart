@@ -170,7 +170,7 @@ class _InputPageState extends State<InputPage> {
 }
 
 class RoundIconButton extends StatelessWidget {
-  RoundIconButton({this.icon, this.onPressed});
+  RoundIconButton({@required this.icon, this.onPressed});
 
   final IconData icon;
   final Function onPressed;
