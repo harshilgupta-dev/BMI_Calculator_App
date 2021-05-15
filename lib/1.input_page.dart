@@ -26,6 +26,7 @@ class _InputPageState extends State<InputPage> {
           title: Text('BMI Calculator'),
         ),
         body: Column(
+          crossAxisAlignment: CrossAxisAlignment.stretch,
           children: <Widget>[
             Expanded(
                 child: Row(
@@ -37,35 +38,35 @@ class _InputPageState extends State<InputPage> {
                         print('Male Button Pressed');
                         selectedGender = Gender.male;
                       });
-                    },
-                    cardChild: IconContent(
-                      icon: FontAwesomeIcons.mars,
-                      label: 'MALE',
+                        },
+                        cardChild: IconContent(
+                          icon: FontAwesomeIcons.mars,
+                          label: 'MALE',
+                        ),
+                        colour: selectedGender == Gender.male
+                            ? kActiveCardColour
+                            : kInactiveCardColour,
+                      ),
                     ),
-                    colour: selectedGender == Gender.male
-                        ? kActiveCardColour
-                        : kInactiveCardColour,
-                  ),
-                ),
-                Expanded(
-                  child: ResuableCard(
-                    onPress: () {
-                      setState(() {
-                        print('FeMale Button Pressed');
-                        selectedGender = Gender.female;
-                      });
-                    },
-                    colour: selectedGender == Gender.female
-                        ? kActiveCardColour
-                        : kInactiveCardColour,
-                    cardChild: IconContent(
-                      icon: FontAwesomeIcons.venus,
-                      label: 'FEMALE',
+                    Expanded(
+                      child: ResuableCard(
+                        onPress: () {
+                          setState(() {
+                            print('FeMale Button Pressed');
+                            selectedGender = Gender.female;
+                          });
+                        },
+                        colour: selectedGender == Gender.female
+                            ? kActiveCardColour
+                            : kInactiveCardColour,
+                        cardChild: IconContent(
+                          icon: FontAwesomeIcons.venus,
+                          label: 'FEMALE',
+                        ),
+                      ),
                     ),
-                  ),
-                ),
-              ],
-            )),
+                  ],
+                )),
             Expanded(
               child: ResuableCard(
                   cardChild: Column(
@@ -80,15 +81,15 @@ class _InputPageState extends State<InputPage> {
             ),
             Expanded(
                 child: Row(
-              children: [
-                Expanded(
-                  child: ResuableCard(colour: kActiveCardColour),
-                ),
-                Expanded(
-                  child: ResuableCard(colour: kActiveCardColour),
-                ),
-              ],
-            )),
+                  children: [
+                    Expanded(
+                      child: ResuableCard(colour: kActiveCardColour),
+                    ),
+                    Expanded(
+                      child: ResuableCard(colour: kActiveCardColour),
+                    ),
+                  ],
+                )),
             Container(
               color: kBottomContainerColour,
               margin: EdgeInsets.only(top: 10.0),
