@@ -93,18 +93,22 @@ class _InputPageState extends State<InputPage> {
                           ),
                         ],
                       ),
-                      Slider(
-                        value: height,
-                        min: 120.0,
-                        max: 220.0,
-                        activeColor: Color(0xFFEB1555),
-                        inactiveColor: Color(0xFF8D8E98),
-                        onChanged: (newValue) {
-                          setState(() {
-                            height = newValue;
-                          });
-                          print(newValue);
-                        },
+                      SliderTheme(
+                        data: SliderTheme.of(context).copyWith(
+                          activeTrackColor: Colors.white,
+                        ),
+                        child: Slider(
+                          value: height,
+                          min: 120.0,
+                          max: 220.0,
+                          inactiveColor: Color(0xFF8D8E98),
+                          onChanged: (newValue) {
+                            setState(() {
+                              height = newValue;
+                            });
+                            print(newValue);
+                          },
+                        ),
                       )
                     ],
                   ),
