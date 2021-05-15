@@ -38,35 +38,35 @@ class _InputPageState extends State<InputPage> {
                         print('Male Button Pressed');
                         selectedGender = Gender.male;
                       });
-                        },
-                        cardChild: IconContent(
-                          icon: FontAwesomeIcons.mars,
-                          label: 'MALE',
-                        ),
-                        colour: selectedGender == Gender.male
-                            ? kActiveCardColour
-                            : kInactiveCardColour,
-                      ),
+                    },
+                    cardChild: IconContent(
+                      icon: FontAwesomeIcons.mars,
+                      label: 'MALE',
                     ),
-                    Expanded(
-                      child: ResuableCard(
-                        onPress: () {
-                          setState(() {
-                            print('FeMale Button Pressed');
-                            selectedGender = Gender.female;
-                          });
-                        },
-                        colour: selectedGender == Gender.female
-                            ? kActiveCardColour
-                            : kInactiveCardColour,
-                        cardChild: IconContent(
-                          icon: FontAwesomeIcons.venus,
-                          label: 'FEMALE',
-                        ),
-                      ),
+                    colour: selectedGender == Gender.male
+                        ? kActiveCardColour
+                        : kInactiveCardColour,
+                  ),
+                ),
+                Expanded(
+                  child: ResuableCard(
+                    onPress: () {
+                      setState(() {
+                        print('FeMale Button Pressed');
+                        selectedGender = Gender.female;
+                      });
+                    },
+                    colour: selectedGender == Gender.female
+                        ? kActiveCardColour
+                        : kInactiveCardColour,
+                    cardChild: IconContent(
+                      icon: FontAwesomeIcons.venus,
+                      label: 'FEMALE',
                     ),
-                  ],
-                )),
+                  ),
+                ),
+              ],
+            )),
             Expanded(
               child: ResuableCard(
                   cardChild: Column(
@@ -74,6 +74,14 @@ class _InputPageState extends State<InputPage> {
                       Text(
                         'HEIGHT',
                         style: kLabelTextStyle,
+                      ),
+                      Row(
+                        children: [
+                          Text(
+                            '180',
+                            style: kNumberTextStyle,
+                          )
+                        ],
                       )
                     ],
                   ),
@@ -81,15 +89,15 @@ class _InputPageState extends State<InputPage> {
             ),
             Expanded(
                 child: Row(
-                  children: [
-                    Expanded(
-                      child: ResuableCard(colour: kActiveCardColour),
-                    ),
-                    Expanded(
-                      child: ResuableCard(colour: kActiveCardColour),
-                    ),
-                  ],
-                )),
+              children: [
+                Expanded(
+                  child: ResuableCard(colour: kActiveCardColour),
+                ),
+                Expanded(
+                  child: ResuableCard(colour: kActiveCardColour),
+                ),
+              ],
+            )),
             Container(
               color: kBottomContainerColour,
               margin: EdgeInsets.only(top: 10.0),
