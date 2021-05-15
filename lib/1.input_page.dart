@@ -1,4 +1,5 @@
 import 'package:bmi_calculator/icon_content.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'reusable_card.dart';
@@ -70,12 +71,14 @@ class _InputPageState extends State<InputPage> {
             Expanded(
               child: ResuableCard(
                   cardChild: Column(
+                    mainAxisAlignment: MainAxisAlignment.center,
                     children: [
                       Text(
                         'HEIGHT',
                         style: kLabelTextStyle,
                       ),
                       Row(
+                        mainAxisAlignment: MainAxisAlignment.center,
                         children: [
                           Text(
                             '180',
