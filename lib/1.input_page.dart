@@ -19,6 +19,7 @@ class _InputPageState extends State<InputPage> {
   // Color femaleCardColour = inactiveCardColour;
 
   Gender selectedGender;
+  double height = 180;
 
   @override
   Widget build(BuildContext context) {
@@ -83,19 +84,21 @@ class _InputPageState extends State<InputPage> {
                         textBaseline: TextBaseline.alphabetic,
                         children: [
                           Text(
-                            '180',
+                            height.toInt().toString(),
                             style: kNumberTextStyle,
                           ),
                           Text(
                             'cm',
                             style: kLabelTextStyle,
-                          )
+                          ),
                         ],
                       ),
                       Slider(
                         value: height,
                         min: 120.0,
                         max: 220.0,
+                        activeColor: Color(0xFFEB1555),
+                        inactiveColor: Color(0xFF8D8E98),
                         onChanged: (newValue) {
                           setState(() {
                             height = newValue;
