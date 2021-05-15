@@ -139,7 +139,16 @@ class _InputPageState extends State<InputPage> {
                             weight.toString(),
                             style: kNumberTextStyle,
                           ),
-                          RoundIconButton()
+                          Row(
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            children: [
+                              RoundIconButton(
+                                icon: FontAwesomeIcons.minus,
+                              ),
+                              SizedBox(width: 10.0),
+                              RoundIconButton(icon: FontAwesomeIcons.plus),
+                            ],
+                          )
                         ],
                       ),
                       colour: kActiveCardColour),
