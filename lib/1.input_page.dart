@@ -43,8 +43,8 @@ class _InputPageState extends State<InputPage> {
                       label: 'MALE',
                     ),
                     colour: selectedGender == Gender.male
-                        ? activeCardColour
-                        : inactiveCardColour,
+                        ? kActiveCardColour
+                        : kInactiveCardColour,
                   ),
                 ),
                 Expanded(
@@ -56,8 +56,8 @@ class _InputPageState extends State<InputPage> {
                       });
                     },
                     colour: selectedGender == Gender.female
-                        ? activeCardColour
-                        : inactiveCardColour,
+                        ? kActiveCardColour
+                        : kInactiveCardColour,
                     cardChild: IconContent(
                       icon: FontAwesomeIcons.venus,
                       label: 'FEMALE',
@@ -67,23 +67,23 @@ class _InputPageState extends State<InputPage> {
               ],
             )),
             Expanded(
-              child: ResuableCard(colour: activeCardColour),
+              child: ResuableCard(colour: kActiveCardColour),
             ),
             Expanded(
                 child: Row(
               children: [
                 Expanded(
-                  child: ResuableCard(colour: activeCardColour),
+                  child: ResuableCard(colour: kActiveCardColour),
                 ),
                 Expanded(
-                  child: ResuableCard(colour: activeCardColour),
+                  child: ResuableCard(colour: kActiveCardColour),
                 ),
               ],
             )),
             Container(
-              color: bottomContainerColour,
+              color: kBottomContainerColour,
               margin: EdgeInsets.only(top: 10.0),
-              height: bottomContainerHeight,
+              height: kBottomContainerHeight,
               width: double.infinity,
             )
           ],
