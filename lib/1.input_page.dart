@@ -214,28 +214,8 @@ class _InputPageState extends State<InputPage> {
                   ),
                 ),
               ],
-                )),
-            GestureDetector(
-              onTap: () {
-                Navigator.push(context, MaterialPageRoute(builder: (context) {
-                  return ResultPage();
-                }));
-              },
-              child: Container(
-                padding: EdgeInsets.only(bottom: 10.0),
-                child: Center(
-                  child: Text(
-                    'CALCULATE',
-                    style: TextStyle(
-                        fontSize: 25.0, fontWeight: FontWeight.bold),
-                  ),
-                ),
-                color: kBottomContainerColour,
-                margin: EdgeInsets.only(top: 10.0),
-                height: kBottomContainerHeight,
-                width: double.infinity,
-              ),
-            )
+            )),
+            BottomButton(),
           ],
         ));
   }
@@ -256,6 +236,37 @@ class RoundIconButton extends StatelessWidget {
       constraints: BoxConstraints.tightFor(width: 50.0, height: 50.0),
       child: Icon(icon),
       onPressed: onPressed,
+    );
+  }
+}
+
+class BottomButton extends StatelessWidget {
+  BottomButton({@required this.onTap, @required this.ButtonTitle});
+
+  final Function onTap;
+  final String ButtonTitle;
+
+  @override
+  Widget build(BuildContext context) {
+    return GestureDetector(
+      onTap: () {
+        Navigator.push(context, MaterialPageRoute(builder: (context) {
+          return ResultPage();
+        }));
+      },
+      child: Container(
+        padding: EdgeInsets.only(bottom: 10.0),
+        child: Center(
+          child: Text(
+            'CALCULATE',
+            style: TextStyle(fontSize: 25.0, fontWeight: FontWeight.bold),
+          ),
+        ),
+        color: kBottomContainerColour,
+        margin: EdgeInsets.only(top: 10.0),
+        height: kBottomContainerHeight,
+        width: double.infinity,
+      ),
     );
   }
 }
