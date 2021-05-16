@@ -1,9 +1,9 @@
-import 'package:bmi_calculator/1.input_page.dart';
-import 'package:bmi_calculator/constants.dart';
-import 'package:bmi_calculator/reusable_card.dart';
+import 'package:bmi_calculator/screen/1.input_page.dart';
+import 'package:bmi_calculator/components/constants.dart';
+import 'package:bmi_calculator/components/reusable_card.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'bottom_button.dart';
+import '../components/bottom_button.dart';
 
 class ResultPage extends StatelessWidget {
   @override

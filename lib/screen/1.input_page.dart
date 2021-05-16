@@ -1,11 +1,11 @@
-import 'package:bmi_calculator/icon_content.dart';
-import 'package:bmi_calculator/result_page.dart';
+import 'package:bmi_calculator/components/icon_content.dart';
+import 'package:bmi_calculator/screen/result_page.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-import 'reusable_card.dart';
-import 'constants.dart';
-import 'bottom_button.dart';
+import '../components/reusable_card.dart';
+import 'package:bmi_calculator/components/constants.dart';
+import '../components/bottom_button.dart';
 
 enum Gender { male, female }
 
@@ -247,5 +247,3 @@ class RoundIconButton extends StatelessWidget {
     );
   }
 }
-
-
