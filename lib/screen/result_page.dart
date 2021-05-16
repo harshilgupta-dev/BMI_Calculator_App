@@ -7,26 +7,21 @@ import '../components/bottom_button.dart';
 
 class ResultPage extends StatelessWidget {
 
-  ResultPage
+  ResultPage({this.bmiResult, this.interpretation, this.resultText});
 
-  (
+  final String bmiResult;
+  final String resultText;
+  final String interpretation;
 
-  {
-});
-
-final String bmiResult;
-final String resultText;
-final String interpretation;
-
-@override
-Widget build(BuildContext context) {
-  return Scaffold(
-    appBar: AppBar(
-      title: Text('BMI Calculator'),
-    ),
-    body: Column(
-      crossAxisAlignment: CrossAxisAlignment.stretch,
-      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: Text('BMI Calculator'),
+      ),
+      body: Column(
+        crossAxisAlignment: CrossAxisAlignment.stretch,
+        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
         children: [
           Expanded(
             child: Container(
