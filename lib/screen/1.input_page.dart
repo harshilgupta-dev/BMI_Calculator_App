@@ -224,7 +224,11 @@ class _InputPageState extends State<InputPage> {
                     CalculatorBrain(weight: weight, height: height);
 
                 Navigator.push(context, MaterialPageRoute(builder: (context) {
-                  return ResultPage();
+                  return ResultPage(
+                    bmiResult: calc.calculateBMI(),
+                    resultText: calc.getResult(),
+                    interpretation: calc.getInterpretation(),
+                  );
                 }));
               },
             ),
