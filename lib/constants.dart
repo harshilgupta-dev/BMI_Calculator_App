@@ -14,3 +14,6 @@ const kBottomContainerColour = Color(0xFFEB1555);
 const kNumberTextStyle = TextStyle(fontWeight: FontWeight.w900, fontSize: 50.0);
 
 const kTitleTextStyle = TextStyle(fontSize: 50.0, fontWeight: FontWeight.bold);
+
+const kResultTextStyle = TextStyle(
+    color: Color(0xFF24D876), fontSize: 20.0, fontWeight: FontWeight.bold);
