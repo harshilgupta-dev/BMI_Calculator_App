@@ -30,8 +30,15 @@ class ResultPage extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 crossAxisAlignment: CrossAxisAlignment.center,
                 children: [
-                  Text('Normal', style: kResultTextStyle,),
-                  Text('18.3', style:,)
+                  Text(
+                    'Normal',
+                    style: kResultTextStyle,
+                  ),
+                  Text(
+                    '18.3',
+                    style: kBMITextStyle,
+                  ),
+                  Text('Your weight is low plz eat more'),
                 ],
               ),
             ),
