@@ -1,3 +1,4 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 const kLabelTextStyle = TextStyle(
@@ -11,3 +12,5 @@ const kInactiveCardColour = Color(0xFF111328);
 const kBottomContainerColour = Color(0xFFEB1555);
 
 const kNumberTextStyle = TextStyle(fontWeight: FontWeight.w900, fontSize: 50.0);
+
+const kTitleTextStyle = TextStyle(fontSize: 50.0, fontWeight: FontWeight.bold);
