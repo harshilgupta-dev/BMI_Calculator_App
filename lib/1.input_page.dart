@@ -215,7 +215,14 @@ class _InputPageState extends State<InputPage> {
                 ),
               ],
             )),
-            BottomButton(),
+            BottomButton(
+              buttonTitle: 'CALCULATE',
+              onTap: () {
+                Navigator.push(context, MaterialPageRoute(builder: (context) {
+                  return ResultPage();
+                }));
+              },
+            ),
           ],
         ));
   }
@@ -241,24 +248,20 @@ class RoundIconButton extends StatelessWidget {
 }
 
 class BottomButton extends StatelessWidget {
-  BottomButton({@required this.onTap, @required this.ButtonTitle});
+  BottomButton({@required this.onTap, @required this.buttonTitle});
 
   final Function onTap;
-  final String ButtonTitle;
+  final String buttonTitle;
 
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
-      onTap: () {
-        Navigator.push(context, MaterialPageRoute(builder: (context) {
-          return ResultPage();
-        }));
-      },
+      onTap: onTap,
       child: Container(
         padding: EdgeInsets.only(bottom: 10.0),
         child: Center(
           child: Text(
-            'CALCULATE',
+            buttonTitle,
             style: TextStyle(fontSize: 25.0, fontWeight: FontWeight.bold),
           ),
         ),

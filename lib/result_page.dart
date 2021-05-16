@@ -1,3 +1,4 @@
+import 'package:bmi_calculator/1.input_page.dart';
 import 'package:bmi_calculator/constants.dart';
 import 'package:bmi_calculator/reusable_card.dart';
 import 'package:flutter/cupertino.dart';
@@ -19,6 +20,7 @@ class ResultPage extends StatelessWidget {
               child: Text(
                 'Your Result',
                 style: kTitleTextStyle,
+                textAlign: TextAlign.center,
               ),
             ),
           ),
@@ -47,6 +49,11 @@ class ResultPage extends StatelessWidget {
               ),
             ),
           ),
+          BottomButton(
+              onTap: () {
+                Navigator.pop(context);
+              },
+              buttonTitle: 'RE-CALCULATE')
         ],
       ),
     );
