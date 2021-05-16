@@ -215,6 +215,13 @@ class _InputPageState extends State<InputPage> {
               ],
             )),
             Container(
+              padding: EdgeInsets.only(bottom: 10.0),
+              child: Center(
+                child: Text(
+                  'CALCULATE',
+                  style: TextStyle(fontSize: 25.0, fontWeight: FontWeight.bold),
+                ),
+              ),
               color: kBottomContainerColour,
               margin: EdgeInsets.only(top: 10.0),
               height: kBottomContainerHeight,
