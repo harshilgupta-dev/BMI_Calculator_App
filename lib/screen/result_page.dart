@@ -7,7 +7,10 @@ import '../components/bottom_button.dart';
 
 class ResultPage extends StatelessWidget {
 
-  ResultPage({this.bmiResult, this.interpretation, this.resultText});
+  ResultPage(
+      {@required this.bmiResult,
+      @required this.interpretation,
+      @required this.resultText});
 
   final String bmiResult;
   final String resultText;
