@@ -4,7 +4,7 @@ class CalculatorBrain {
   CalculatorBrain({this.weight, this.height});
 
   final int weight;
-  final int height;
+  final double height;
   double _bmi;
 
   String calculateBMI() {
